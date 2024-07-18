@@ -9,6 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
     <link rel="stylesheet" href="src/styles.css" />
     <title>Recipe Generator</title>
   </head>
@@ -17,7 +19,7 @@
       <header><h1>Recipe Generator</h1></header>
 
       <main>
-        <form>
+        <form id="recipe-form">
           <input
             type="text"
             placeholder="Enter an ingredient"
@@ -27,8 +29,8 @@
           />
           <input type="submit" value="Submit" class="search-button" />
         </form>
-        <div class="recipe">Ingredients to display here</div>
-        <div class="recipe">Recipe to display here</div>
+        <div class="recipe" id="ingredients"></div>
+        <div class="recipe" id="recipe"></div>
       </main>
 
       <footer>
