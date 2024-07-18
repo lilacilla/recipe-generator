@@ -64,7 +64,7 @@ form {
   background-color: #fff;
   font-size: 14px;
   padding: 20px;
-  line-height: 1.5px;
+  line-height: 1.5;
   border-left: 3px solid #868b8e;
   box-shadow: 0px 4px 30px 0px rgba(65, 50, 100, 0.08);
   border-radius: 10px;
@@ -72,8 +72,29 @@ form {
   letter-spacing: 0.5px;
 }
 
+.recipe h2 {
+  font-size: 24px;
+}
+
+.recipe h3 {
+  font-size: 18px;
+}
+
+.recipe h4 {
+  opacity: 70%;
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.recipe li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
 footer {
-  margin-top: 150px;
+  margin-top: 70px;
   font-size: 14px;
   padding: 50px 0 30px;
   text-align: center;
