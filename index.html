@@ -16,22 +16,27 @@
   </head>
   <body>
     <div class="container">
-      <header><h1>Recipe Generator</h1></header>
+      <header><h1>AI Recipe Generator</h1></header>
 
       <main>
-        <form id="recipe-form">
-          <input
-            type="text"
-            placeholder="Enter an ingredient"
-            autofocus
-            required
-            class="search-bar"
-            id="search-input"
-          />
-          <input type="submit" value="Submit" class="search-button" />
-        </form>
-        <div class="recipe" id="ingredients"></div>
-        <div class="recipe" id="recipe"></div>
+        <div class="form-container">
+          <form id="recipe-form">
+            <input
+              type="search"
+              placeholder="Find recipes by ingredients or name..."
+              autofocus
+              required
+              class="search-bar"
+              id="search-input"
+            />
+            <input type="submit" value="Submit" class="search-button" />
+          </form>
+          <div class="hint">
+            e.g. garlic, mac & cheese, chocolate fudge cake
+          </div>
+        </div>
+
+        <div class="recipe hidden" id="recipe"></div>
       </main>
 
       <footer>

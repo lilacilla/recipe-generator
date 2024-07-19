@@ -1,17 +1,8 @@
 function displayRecipe(response) {
-  console.log(response.data.answer);
-  new Typewriter("#ingredients", {
+  new Typewriter("#recipe", {
     strings: response.data.answer,
     autoStart: true,
-    delay: 5,
-    cursor: null,
-    loop: false,
-  });
-
-  new Typewriter("#recipe", {
-    strings: "Recipe to display here",
-    autoStart: true,
-    delay: 5,
+    delay: 2,
     cursor: null,
   });
 }
@@ -27,9 +18,11 @@ function generateRecipe(event) {
   let context = `Provide a recipe containing information provided in ${prompt}. Use html tags to display it better and separate each line with a html <br /> or <li></li> tag if possible. Do not override CSS styling. This is important, recipe titles must always display between a h2 tag, example <h2>Raspberry Lemonade</h2>, subtitles must always display between a h3 tag, example <h3>Ingredients</h3>, do not ignore. Always provide ingredients. Always provide serving sizes in h4 tags, do not ignore. Always provide instructions. Prioritise celsius.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let recipeBlock = document.querySelector("#recipe");
+  recipeBlock.classList.remove("hidden");
+  recipeBlock.innerHTML = `<span class="blink load-msg">🍽️Cooking up your recipe containing '${searchInput.value}'</span>`;
+
   axios.get(apiUrl).then(displayRecipe);
-  console.log(searchInput.value);
-  console.log(prompt);
 }
 
 let recipeFormElement = document.querySelector("#recipe-form");
